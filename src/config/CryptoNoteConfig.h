@@ -60,8 +60,8 @@ namespace CryptoNote
         static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
         const char GENESIS_COINBASE_TX_HEX[] =
-            "010a01ff000188f3b501029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd088071210142694232c5b04151"
-            "d9e4c27d31ec7a68ea568b19488cfcb422659a07a0e44dd5";
+            ""
+            "";
 
         static_assert(
             sizeof(GENESIS_COINBASE_TX_HEX) / sizeof(*GENESIS_COINBASE_TX_HEX) != 1,
@@ -298,7 +298,7 @@ namespace CryptoNote
         const char MINER_CONFIG_FILE_NAME[] = "miner_conf.json";
     } // namespace parameters
 
-    const char CRYPTONOTE_NAME[] = "TurtleCoin";
+    const char CRYPTONOTE_NAME[] = "AlphaCoin";
 
     const uint8_t TRANSACTION_VERSION_1 = 1;
 
@@ -374,20 +374,16 @@ namespace CryptoNote
     const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES = 125; // 125 files
     const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT = 4; // 4 DB threads
 
-    const char LATEST_VERSION_URL[] = "http://latest.turtlecoin.lol";
+    const char LATEST_VERSION_URL[] = "http://latest.alphacoin.org";
 
-    const std::string LICENSE_URL = "https://github.com/turtlecoin/turtlecoin/blob/master/LICENSE";
+    const std::string LICENSE_URL = "https://github.com/rasath/alphacoin";
 
     const static boost::uuids::uuid CRYPTONOTE_NETWORK = {
-        {0xb5, 0x0c, 0x4a, 0x6c, 0xcf, 0x52, 0x57, 0x41, 0x65, 0xf9, 0x91, 0xa4, 0xb6, 0xc1, 0x43, 0xe9}};
+        {0xb6, 0x0d, 0x4b, 0x6d, 0xcg, 0x53, 0x58, 0x42, 0x66, 0xf0, 0x92, 0xa5, 0xb7, 0xc2, 0x44, 0xe0}};
 
     const char *const SEED_NODES[] = {
-        "206.189.142.142:11897", // rock
-        "145.239.88.119:11897", // cision
-        "165.227.252.132:11897", // iburnmycd
-        "148.251.178.238:11897", // hv
-        "45.32.138.7:11897", // extra
-        "46.214.70.196:11897", // CuveeRO
-        "94.113.119.122:11897" // CuveeCZ
+        "192.168.0.104", // rock
+        "192.168.0.105", // cision
+        
     };
 } // namespace CryptoNote
